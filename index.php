@@ -10,5 +10,6 @@
 $alao = 'Alexandr';
 echo 'How are you, '.$alao.'?';
 
+$newalao = 'Hello';
 
 ?>
