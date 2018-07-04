@@ -7,7 +7,8 @@
  */
 
 
-echo "Hello world!";
+$alao = 'Alexandr';
+echo 'How are you, '.$alao.'?';
 
 
 ?>
