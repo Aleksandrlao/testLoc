@@ -6,10 +6,20 @@
  * Time: 18:21
  */
 
+// lesson 1-2: переменные, операции
+//include "lesson1-2.php";
 
-$alao = 'Alexandr';
-echo 'How are you, '.$alao.'?';
+// lesson 1-2: массивы
+//include "lesson3.php";
 
-$newalao = 'Hello';
+
+
+// lesson 1-2: функции
+//include "lesson4/lesson4.php";
+include "lesson4/homework11_07.php";
+
+
+
+
 
 ?>
