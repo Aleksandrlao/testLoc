@@ -1,0 +1,19 @@
+--  акой продукт заказывали чаще всего
+
+SELECT SUM(OrderDetails.Quantity) AS sumOrder, OrderDetails.ProductID AS ProductID, Products.ProductName
+FROM [OrderDetails]
+INNER JOIN Products ON OrderDetails.ProductID = Products.ProductID
+GROUP BY OrderDetails.ProductID 
+ORDER BY sumOrder DESC LIMIT 1
+
+
+
+
+-- ¬ывести самый заказываемый товар в городе
+
+
+SELECT COUNT(ProductID), OrderDetails.OrderID, OrderDetails.ProductID, Customers.City FROM [OrderDetails]
+INNER JOIN Orders ON OrderDetails.OrderID = Orders.OrderID
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+GROUP BY OrderDetails.ProductID, Customers.City
+

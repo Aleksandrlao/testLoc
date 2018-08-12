@@ -1,30 +1,37 @@
 <?php
 
+//include "callback.php";
+
 $array = [1, 2, 3, -4, 5, -6];
 
-$positiveNumbers = getPositiveNumbers($array, function($items) {
-    $result = [];
-    foreach ( $items as $item ) {
-        if( !($item % 2) ) {
-            $result[] = $item;
-        }
+/*$result = array_filter( $array, function($item, $key) {
+    //echo $item.'<br>';
+    if( $item > 0 & !($item % 2) ) {
+        return true;
     }
-    return $result;
+}, ARRAY_FILTER_USE_BOTH);
+var_dump($result);*/
+
+
+/*array_walk( $array, function(&$value) {
+    $value = $value + 10;
 });
+var_dump($array);*/
 
-function getPositiveNumbers( $array, callable $callback  ) {
-    $result = [];
 
-    foreach ( $array as $value ) {
-        if( $value > 0 ) {
-            $result[] = $value;
-        }
+$array = ['Vadim', 'Max']; // Изменить значение каждого элемента массива: ['Hello Vadim', 'Hello Max'];
+array_walk( $array, function(&$value) {
+    $value = 'Hello '.$value;
+});
+var_dump($array);
+
+
+echo '<br>=================================================<br>';
+
+$array = [1, 5, 7, 8, -9, 3]; // Отфильтровать массив: оставить если элемент больше 3-х и нечетный
+$result = array_filter( $array, function($item) {
+    if( $item > 3 & ($item % 2) ) {
+        return true;
     }
-    if($callback) {
-        $result = call_user_func($callback, $result);
-    }
-    return $result;
-}
-
-
-var_dump($positiveNumbers);
+});
+var_dump($result);

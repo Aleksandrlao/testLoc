@@ -25,8 +25,32 @@
 //include "lesson6/root.php";
 
 
-// lesson 7: GET, POST, cookie
-include "lesson7/lesson7.php";
+// lesson 7: callback
+//include "lesson7/lesson7.php";
+
+// lesson 8: работа с файлами
+//include "lesson8/index.php";
+
+// lesson 9: работа с БД
+//include "lesson9/index.php";
+
+// lesson 10: работа с БД
+//include "lesson10/index.php";
+
+// lesson 14: PDO (mysql connect php)
+//include "lesson14/pdo.php";
+
+// lesson 15:
+//include "lesson15/index.php";
+//include "lesson15/work.php";
+
+// lesson 17: ООП
+//include "lesson17/index.php";
+
+// lesson 18: ООП
+//include "lesson18/index.php";
+include "lesson18/practice.php";
+
 
 
 
